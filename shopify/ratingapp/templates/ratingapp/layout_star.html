@@ -1,0 +1,134 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'testapp/star.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fbody{
+            margin:auto;
+            width: 500px;
+            
+        }
+        .card{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .card-body{
+            width: 300px;
+        }
+        img{
+            width:100%;
+        }
+        .rating{
+            margin-top: 40px;
+            display:flex;
+            justify-content: space-around;
+        }
+        
+        .progress-items {
+            margin:5px;
+        }
+        progress{
+            font-size: 20px;
+        }
+        /* i:hover{
+            color:gold;
+        } */
+        i{
+            font-size: 18px;
+        }
+        .nextpack {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .next{
+            text-decoration: none;
+            background-color: rgb(17, 17, 91);
+            color:white;
+            padding:5px 30px;
+            border-radius: 5px;
+            
+        }
+        .one:hover{
+            color: gold;
+            font-size: 20px;
+        }
+
+        .two:hover{
+            color: gold;
+            font-size: 20px;
+        }
+
+        .three:hover{
+            color: gold;
+            font-size: 20px;
+        }
+
+        .four:hover{
+            color: gold;
+            font-size: 20px;
+        }
+
+        .five:hover{
+            color: gold;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const nextbtn = document.querySelector('.next');
+            const one = document.querySelector("#one");
+            const two = document.querySelector("#two");
+            const three = document.querySelector("#three");
+            const four = document.querySelector("#four");
+            const five = document.querySelector("#five");
+            const hco = "<i class='bx bxs-star' style='color:gold'></i>";
+            nextbtn.hidden = true;
+            document.querySelector(".one").onclick = function() {
+                one.innerHTML=hco;
+                nextbtn.hidden = false;
+            }
+            document.querySelector(".two").onclick = function() {
+                one.innerHTML=hco;
+                two.innerHTML=hco;
+                nextbtn.hidden = false;
+            }
+            document.querySelector(".three").onclick = function() {
+                one.innerHTML=hco;
+                two.innerHTML=hco;
+                three.innerHTML=hco;
+                nextbtn.hidden = false;
+            }
+            document.querySelector(".four").onclick = function() {
+                one.innerHTML=hco;
+                two.innerHTML=hco;
+                three.innerHTML=hco;
+                four.innerHTML=hco;
+                nextbtn.hidden = false;
+            }
+            document.querySelector(".five").onclick = function() {
+                one.innerHTML=hco;
+                two.innerHTML=hco;
+                three.innerHTML=hco;
+                four.innerHTML=hco;
+                five.innerHTML=hco;
+                nextbtn.hidden = false;
+            }
+        });
+    </script>
+</head>
+<body>
+    {% block body %}
+
+
+    {% endblock %}
+
+</body>
+</html>

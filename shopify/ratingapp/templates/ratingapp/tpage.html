@@ -1,0 +1,58 @@
+{% extends 'ratingapp/layout_star.html' %}
+
+{% block body %}
+
+    <div class="fbody">
+        <div class="card">
+            <div class="card-body">
+
+                <img src="{{ image }}" alt="">
+                <a href=""></a>
+            </div>    
+        </div>
+
+        <div class="rating">
+            <div class="star">
+                <h1>4.7</h1>
+                <div class="starpack">
+                    <span id="one"><i class='bx bx-star one' ></i></span>
+                    <span id="two"><i class='bx bx-star two' ></i></span>
+                    <span id="three"><i class='bx bx-star three' ></i></span>
+                    <span id="four"><i class='bx bx-star four' ></i></span>
+                    <span id="five"><i class='bx bx-star five' ></i></span>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-items">
+                    <label for="file"> 5</label>
+                    <progress id="file" value="93" max="100"> 93% </progress>
+                </div>
+
+                <div class="progress-items">
+                    <label for="file"> 4</label>
+                    <progress id="file" value="20" max="100"> 20% </progress>
+                </div>
+
+                <div class="progress-items">
+                    <label for="file"> 3</label>
+                    <progress id="file" value="3" max="100"> 3% </progress>
+                </div>
+
+                <div class="progress-items">
+                    <label for="file"> 2</label>
+                    <progress id="file" value="10" max="100"> 10% </progress>
+                </div>
+
+                <div class="progress-items">
+                    <label for="file"> 1</label>
+                    <progress id="file" value="7" max="100"> 7% </progress>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nextpack">
+        <a href="{% url 'epage' %}" class="next">Complete</a>
+    </div>
+
+
+{% endblock %}

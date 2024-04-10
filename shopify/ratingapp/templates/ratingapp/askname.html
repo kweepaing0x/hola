@@ -1,0 +1,31 @@
+{% extends 'ratingapp/layout.html' %}
+
+{% block body %}
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            document.querySelector("#sbtn").onclick = function(){
+                const np = document.querySelector(".form-att");
+                const name = document.querySelector("#id_name").value;
+                np.innerHTML = `<h3>Welcome ${name}!</h3>`
+                document.querySelector("#start").hidden = false;
+            };
+        })
+    </script>
+
+    <div class="cont-form">
+        <div class="form">
+            <div class="form-content">
+                <form class="form-att" action="{% url 'usern' %}" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    <button type="submit" class="sbtn" id="sbtn">Confirm</button>
+                </form>
+                <a href="{% url 'fpage' %}" class="start" id="start" hidden>Start</a>
+            </div>
+        </div>
+    </div>
+    
+
+{% endblock %}
+
+

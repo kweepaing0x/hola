@@ -1,0 +1,58 @@
+{% extends 'ratingapp/layout_star.html' %}
+
+{% block body %}
+
+    <div class="fbody">
+        <div class="card">
+            <div class="card-body">
+
+                <img src="{{ image }}" alt="">
+                <a href=""></a>
+            </div>    
+        </div>
+
+        <div class="rating">
+            <div class="star">
+                <h1>4.9</h1>
+                <div class="starpack">
+                    <span id="one"><i class='bx bx-star one' ></i></span>
+                    <span id="two"><i class='bx bx-star two' ></i></span>
+                    <span id="three"><i class='bx bx-star three' ></i></span>
+                    <span id="four"><i class='bx bx-star four' ></i></span>
+                    <span id="five"><i class='bx bx-star five' ></i></span>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-items">
+                    <label for="file"> 5</label>
+                    <progress id="file" value="90" max="100"> 90% </progress>
+                </div>
+
+                <div class="progress-items">
+                    <label for="file"> 4</label>
+                    <progress id="file" value="30" max="100"> 30% </progress>
+                </div>
+
+                <div class="progress-items">
+                    <label for="file"> 3</label>
+                    <progress id="file" value="10" max="100"> 10% </progress>
+                </div>
+
+                <div class="progress-items">
+                    <label for="file"> 2</label>
+                    <progress id="file" value="6" max="100"> 6% </progress>
+                </div>
+
+                <div class="progress-items">
+                    <label for="file"> 1</label>
+                    <progress id="file" value="2" max="100"> 2% </progress>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nextpack">
+        <a href="{% url 'spage' %}" class="next">Next</a>
+    </div>
+
+
+{% endblock %}
